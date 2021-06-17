@@ -1,0 +1,101 @@
+.App {
+  background-color: #f4f4f5;
+  width: 100vw;
+  height: 100vh;
+  padding:24px;
+}
+
+.btn_container {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    max-height: 40px;
+}
+.active {
+  border: solid 2px #3188f4;
+  background-color: #ffffff;
+  color: #3188f4 !important;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+}
+.btn {
+  width: 120px;
+  height: 40px;
+  padding: 9px 11px 9px 12px;
+  font-weight: bold;
+  border: 0;
+  color: #6a7182;
+}
+
+.container {
+  display:flex;
+}
+
+.box{
+  width:100%;
+  height:100%;
+  min-width: 566px;
+  // need to verify
+  min-height:550px;
+  margin: 24px 24px 24px 0px;
+  padding: 17px 6px 50px 24px;
+  border-radius: 20px;
+  border: solid 1px #e8e8e8;
+  background-color: #ffffff;
+}
+.box:nth-child(2){
+
+  margin-right:0px;
+
+}
+.head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 44px;
+
+  h1 {
+    flex:75%;
+    font-size: 20px;
+    color: #1f2024;
+    font-weight: 600;
+    text-align: left;
+  }
+  .side_btn {
+    flex: 25%;
+    text-align: right;
+  }
+}
+
+ul {
+  list-style: none;
+}
+.first_row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 44px;
+  .picture {
+    background-color: grey;
+    border-radius: 6px;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+  }
+  img {
+    width: 30px;
+    height: 30px;
+    text-align: left;
+  }
+  .text {
+    flex: 75%;
+    margin-left: 12px;
+    height: 22px;
+  }
+.time {
+  flex: 10%;
+
+}
+
+}
