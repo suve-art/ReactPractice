@@ -1,34 +1,30 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './App.scss';
-import Webicon from './assets/image.svg';
-import Arrowleft from './assets/arrowleft.svg';
-import Arrowright from './assets/arrowright.svg';
-import Blurleft from './assets/leftblur.svg';
-import Blurright from './assets/blurright.svg';
 
 function App() {
   const [screen, setScreen] = useState('usedWebsites');
   const changeScreen = (screenName) => {
     setScreen(screenName);
   };
+
   return (
     <div className='App'>
       <div className='view_time_wrapper'>
 
-        <div className='radio_button_container'>
+        <div className='button_container'>
           <input type='radio' name='view' id='view_today' className='no_display' />
-          <label className='radio_click' htmlFor='view_today'>Today</label>
+          <label className='button_click' htmlFor='view_today'>Today</label>
         </div>
 
 
-        <div className='radio_button_container'>
+        <div className='button_container'>
           <input type='radio' name='view' id='view_30_days' className='no_display' />
-          <label className='radio_click' htmlFor='view_30_days'>Last 30 days</label>
+          <label className='button_click' htmlFor='view_30_days'>Last 30 days</label>
         </div>
 
       </div>
       <div className='screen_container'>
-        <div className='screen'></div>
+        <div className='screen_empty'></div>
         <div className='screen'>
           {screen === 'usedWebsites' &&
             <>
@@ -36,12 +32,12 @@ function App() {
                 <h1>Most Used Websites</h1>
                 <div className='page_next'>
 
-                  <span className='websites_arrow_right' ></span>
-                  <span className='websites_arrow_left' onClick={() => changeScreen('socialMedia')}></span>
+                  <span className='websites_arrow_left' />
+                  <span className='websites_arrow_right' onClick={() => changeScreen('socialMedia')}></span>
                 </div>
               </div>
-              <div className='screen_content'>
-                <ul>
+              <div className='screen_content_container'>
+                <ul className='screen_content'>
                   <li className='website_list'>
 
                     <span className='website_icon' ></span>
@@ -72,18 +68,19 @@ function App() {
               </div>
             </>
           }
-          {screen === 'socialMedia' &&
+          {
+            screen === 'socialMedia' &&
             <>
               <div className='page_title'>
                 <h1>Most Used Social Apps</h1>
                 <div className='page_next'>
 
-                  <span className='social_arrow_right' onClick={() => changeScreen('usedWebsites')}></span>
-                  <span className='social_arrow_left' ></span>
+                  <span className='social_arrow_left' onClick={() => changeScreen('usedWebsites')}></span>
+                  <span className='social_arrow_right' />
                 </div>
               </div>
-              <div className='screen_content'>
-                <ul>
+              <div className='screen_content_container'>
+                <ul className='screen_content'>
                   <li className='website_list'>
                     <div className='app_logo'>f</div>
                     <span className='website_name'>Facebook</span>
